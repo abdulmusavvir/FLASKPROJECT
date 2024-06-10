@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .centered-form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+        .form-title {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="centered-form">
+            <h2 class="form-title">Currency Converter</h2>
+            <br>
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label for="input1">Indian Currency </label>
+                    <input type="text" class="form-control" id="INR" name="INR" placeholder="Enter your INR" value="{{ INRValue or '' }}">
+                </div> 
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary my-3">Convert</button>
+                </div>
+                <div class="form-group">
+                    <label for="input2">USD Dollar</label>
+                    <input type="text" class="form-control" placeholder="Converted USD Dollar Value" id="USDValue" name="USDValue" value="{{ USDValue or '' }}" readonly>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
